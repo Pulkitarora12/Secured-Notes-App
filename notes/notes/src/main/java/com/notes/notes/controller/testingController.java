@@ -11,6 +11,11 @@ public class testingController {
         return "Welcome to Notes App";
     }
 
+    @GetMapping("/")
+    public static String nil() {
+        return "Welcome to Notes App";
+    }
+
     @GetMapping("/public/hello")
     public static String hello() {
         return "hello";

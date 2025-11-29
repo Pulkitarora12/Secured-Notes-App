@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/secure-notes-react/secure-notes-react" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/spring-security-masterclass" vcs="Git" />
   </component>
 </project>
