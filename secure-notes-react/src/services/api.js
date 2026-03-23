@@ -28,7 +28,7 @@ api.interceptors.request.use(
           { withCredentials: true }
         );
         csrfToken = response.data.token;
-        localStorage.setItem("CSRF_TOKEN", csrfToken);
+        localStorage.setItem("XSRF_TOKEN", csrfToken);
       } catch (error) {
         console.error("Failed to fetch CSRF token", error);
       }

@@ -5,12 +5,14 @@ import com.secure.notes.entity.Role;
 import com.secure.notes.entity.User;
 import com.secure.notes.repository.RoleRepository;
 import com.secure.notes.repository.UserRepository;
+import com.secure.notes.security.config.OAuth2LoginSuccessHandler;
 import com.secure.notes.security.jwt.AuthEntryPointJwt;
 import com.secure.notes.security.jwt.AuthTokenFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -37,13 +39,17 @@ public class SecurityConfig {
     @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
 
+    @Autowired
+    @Lazy
+    private OAuth2LoginSuccessHandler oAuth2LoginSuccessHandler;
+
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
         return new AuthTokenFilter();
     }
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(HttpSecurity http, OAuth2LoginSuccessHandler oAuth2LoginSuccessHandler) throws Exception {
 
         // only needed when credentials are being stored as cookies or sessions
         http.csrf(csrf ->
@@ -59,10 +65,13 @@ public class SecurityConfig {
                 (request) -> request
                         .requestMatchers("/api/admin/**").hasRole("ADMIN")
                         .requestMatchers("/api/auth/public/**").permitAll()
+                        .requestMatchers("/oauth2/**").permitAll()
                         .requestMatchers("/api/csrf-token").permitAll()
                         .requestMatchers("/error").permitAll()
                         .anyRequest().authenticated()
-        );
+        ).oauth2Login(oauth2 -> {
+            oauth2.successHandler(oAuth2LoginSuccessHandler);
+        });
 
         http.exceptionHandling(exception ->
                 exception.authenticationEntryPoint(unauthorizedHandler));

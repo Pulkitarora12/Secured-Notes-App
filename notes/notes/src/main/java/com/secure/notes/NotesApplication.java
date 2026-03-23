@@ -12,14 +12,14 @@ public class NotesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(NotesApplication.class, args);
 	}
-
-    @GetMapping("/")
-    public String helper() {
-        return "hello";
-    }
-
-    @GetMapping("/hi")
-    public String hi() {
-        return "hi";
-    }
+//
+//    @GetMapping("/")
+//    public String helper() {
+//        return "hello";
+//    }
+//
+//    @GetMapping("/hi")
+//    public String hi() {
+//        return "hi";
+//    }
 }
