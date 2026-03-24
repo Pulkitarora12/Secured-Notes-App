@@ -35,11 +35,10 @@ A plug-and-play Spring Boot + React authentication boilerplate. Drop it in, swap
 ---
 
 ## AuthTemplate Gallary
-    <img width="1919" height="930" alt="Screenshot 2026-03-24 182327" src="https://github.com/user-attachments/assets/e58330df-2809-4cc8-aeb7-65ff570de111" />
-    <img width="1893" height="926" alt="Screenshot 2026-03-24 182353" src="https://github.com/user-attachments/assets/148d9cd9-86b1-4807-a8f6-c71131e6ec57" />
-    <img width="1904" height="931" alt="Screenshot 2026-03-24 182411" src="https://github.com/user-attachments/assets/b6c6f74e-41fa-4c5e-bc61-48dd5e4e4e39" />
-    <img width="1902" height="893" alt="Screenshot 2026-03-24 182437" src="https://github.com/user-attachments/assets/e23fbf12-ea5e-4c1a-937d-8aad697087ea" />
-    <img width="1901" height="903" alt="Screenshot 2026-03-24 182448" src="https://github.com/user-attachments/assets/0642662a-0ca6-47df-963a-db1620a18b08" />
+<img width="1919" height="930" alt="Screenshot 2026-03-24 182327" src="https://github.com/user-attachments/assets/03ede6f1-c190-4ab5-8580-f6bf222d8b30" />
+<img width="1893" height="926" alt="Screenshot 2026-03-24 182353" src="https://github.com/user-attachments/assets/7f9879ed-1eec-4585-b8d0-3f00e685cd95" />
+<img width="1902" height="893" alt="Screenshot 2026-03-24 182437" src="https://github.com/user-attachments/assets/db1fe75b-3f0d-4902-a659-4a274801eba8" />
+<img width="1901" height="903" alt="Screenshot 2026-03-24 182448" src="https://github.com/user-attachments/assets/33a6043e-3949-4e9c-b6a9-5617fc67f694" />
     
 ---
 
